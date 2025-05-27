@@ -2,13 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, catchError, map, Observable, of, tap } from 'rxjs';
 import { Login } from '../models/login.model';
+import { environment } from 'src/environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  private apiUrl = 'http://localhost:3001';
+  private apiUrl = 'environment.apiUrl';
   
   private refreshSubject = new BehaviorSubject<boolean>(false);
   refresh$ = this.refreshSubject.asObservable();
