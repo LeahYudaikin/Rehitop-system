@@ -4,13 +4,15 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, Observable, throwError } from 'rxjs';
 import { v4 as uuidv4 } from 'uuid';
 import Swal from 'sweetalert2';
+import { environment } from 'src/environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ManagerService {
 
-  private jsonUrl = 'http://localhost:3001/products';
+  private jsonUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 
