@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError, map, Observable, throwError } from 'rxjs';
 import { v4 as uuidv4 } from 'uuid';
 import Swal from 'sweetalert2';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../environments/environment';
 
 
 @Injectable({
