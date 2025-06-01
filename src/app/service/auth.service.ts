@@ -10,7 +10,7 @@ import { environment } from '../../environments/environment';
 })
 export class AuthService {
 
-  private apiUrl = 'environment.apiUrl';
+  private apiUrl = environment.apiUrl;
   
   private refreshSubject = new BehaviorSubject<boolean>(false);
   refresh$ = this.refreshSubject.asObservable();
